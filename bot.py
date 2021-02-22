@@ -1,4 +1,5 @@
 import discord
+import cloze
 
 client = discord.Client()
 
@@ -11,6 +12,8 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.content.startswith('2qbx'):
-        await message.channel.send('oilllll')
+    if message.content.startswith('Q: '):
+        await message.channel.send(cloze.cloze(message.content[3:]))
+
+client.run("ODEzMzc1Mzg2MDAzNTcwNzM4.YDOY2w.qYt4E4amESiwP2RovbWDUpS_lGo")
 
