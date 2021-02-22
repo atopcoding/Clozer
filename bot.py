@@ -14,4 +14,3 @@ async def on_message(message):
     if message.content.startswith('2qbx'):
         await message.channel.send('oilllll')
 
-client.run("ODEzMzc1Mzg2MDAzNTcwNzM4.YDOY2w.8eQDCy9yWtM191Si_G5nbvcAjrM")
