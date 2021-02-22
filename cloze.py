@@ -12,4 +12,3 @@ def cloze(ques):
     options = spl[1:]
 
     return fb.fitb(masked, options)
-

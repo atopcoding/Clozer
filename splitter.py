@@ -15,7 +15,3 @@ def splitter(string):
     raw = [x.lower() for x in raw] #using BERT uncased
 
     return raw
-
-
-
-

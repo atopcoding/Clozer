@@ -11,6 +11,8 @@ async def on_ready():
 async def on_message(message):
     if message.author == client.user:
         return
+    
+    print(message.attachments)
 
     if message.content.startswith('Q: '):
         await message.channel.send(cloze.cloze(message.content[3:]))
