@@ -1,5 +1,11 @@
 import discord
 import cloze
+import json
+
+#Loads config.json
+with open("./config.json") as f:
+    data = json.load(f)
+
 
 client = discord.Client()
 
@@ -15,5 +21,5 @@ async def on_message(message):
     if message.content.startswith('Q: '):
         await message.channel.send(cloze.cloze(message.content[3:]))
 
-client.run("ODEzMzc1Mzg2MDAzNTcwNzM4.YDOY2w.qYt4E4amESiwP2RovbWDUpS_lGo")
+client.run(data["discordKey"])
 
