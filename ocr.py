@@ -8,4 +8,4 @@ import cloze
 
 def ocr(filedir):
     print(pytesseract.image_to_string(Image.open(filedir)))
-    return cloze.clozer(pytesseract.image_to_string(Image.open(filedir)))
+    return cloze.clozer(pytesseract.image_to_string(Image.open(filedir)))[1]

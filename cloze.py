@@ -4,9 +4,6 @@ from fitbert import FitBert
 
 
 def clozer(ques):
-    ques = '''Although the small group of soldiers was greatly ______ by their enemy, they fought with great courage
-    and finally won the battle.
-    (A) initiated (B) contradicted (C) outnumbered (D) triggered'''
     spl = splitter.splitter(ques) #preprocess the string
 
     fb = FitBert() 
