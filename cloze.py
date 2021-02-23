@@ -18,6 +18,7 @@ def clozer(ques):
     #Split the question statement into tokens
     tokens = re.findall(r"[\w']+|[.,!?;]", masked)
 
+    res = []
     for i in range(len(tokens)): #tries to insert a ***mask*** token between every word except the last full stop
         _tok = tokens.copy() #just copies the value
         _tok.insert(i, "***mask***") 
