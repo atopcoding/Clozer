@@ -22,4 +22,4 @@ def clozer(ques):
 
     ans = max(res, key = lambda x: x[0]) #gets max entry based on score
 
-    return ans[1]
+    return ans
