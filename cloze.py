@@ -1,13 +1,10 @@
 import splitter, re
 from fitbert import FitBert
 
-
-
 def clozer(ques):
     spl = splitter.splitter(ques) #preprocess the string
 
     fb = FitBert() 
-
 
     masked = spl[0]
     options = spl[1:]
@@ -25,8 +22,4 @@ def clozer(ques):
 
     ans = max(res, key = lambda x: x[0]) #gets max entry based on score
 
-    print(ans)
-    return ans
-
-
-
+    return ans[1]
